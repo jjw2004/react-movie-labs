@@ -12,9 +12,12 @@ const Header = (props ) => {
       component="div" 
       sx={{
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
+        alignItems: "center",
         flexWrap: "wrap",
         marginBottom: 1.5,
+        padding: 2,
+        width: "100%",
       }}
       >
       <IconButton
@@ -23,7 +26,7 @@ const Header = (props ) => {
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
 
-      <Typography variant="h4" component="h3">
+      <Typography variant="h4" component="h3" sx={{ flexGrow: 1, textAlign: "center" }}>
         {title}
       </Typography>
       <IconButton

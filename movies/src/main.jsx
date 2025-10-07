@@ -8,12 +8,30 @@ import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
 const App = () => {
   return (
     <BrowserRouter>
-      <ul>
+      <ul style={{
+        display: "flex",
+        listStyle: "none",
+        padding: "1rem",
+        margin: 0,
+        backgroundColor: "#f5f5f5",
+        borderBottom: "1px solid #ddd",
+        gap: "2rem"
+      }}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" style={{
+            textDecoration: "none",
+            color: "#1976d2",
+            fontWeight: "bold",
+            fontSize: "1.1rem"
+          }}>Home</Link>
         </li>
         <li>
-          <Link to="/movies/favorites">Favorites</Link>
+          <Link to="/movies/favorites" style={{
+            textDecoration: "none",
+            color: "#1976d2",
+            fontWeight: "bold",
+            fontSize: "1.1rem"
+          }}>Favorites</Link>
         </li>
       </ul>
       <Routes>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../headerMovieList";
 import FilterCard from "../filterMoviesCard";
 import MovieList from "../movieList";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 
 function MovieListPageTemplate({ movies, title, selectFavorite }) {
   const [nameFilter, setNameFilter] = useState("");
@@ -23,7 +23,7 @@ function MovieListPageTemplate({ movies, title, selectFavorite }) {
   };
 
   return (
-    <Grid container>
+    <Grid container spacing={2} sx={{ padding: "1rem" }}>
       <Grid size={12}>
         <Header title={title} />
       </Grid>
