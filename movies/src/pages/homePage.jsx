@@ -24,6 +24,13 @@ const HomePage = (props) => {
     else setGenreFilter(value);
   };
 
+  const addToFavorites = (movieId) => {
+    const updatedMovies = movies.map((m) =>
+      m.id === movieId ? { ...m, favorite: true } : m
+    );
+    setMovies(updatedMovies);
+  };
+
   useEffect(() => {
     console.log("TMDB API Key:", import.meta.env.VITE_TMDB_KEY);
     fetch(
@@ -70,7 +77,7 @@ const HomePage = (props) => {
             genreFilter={genreFilter}
           />
         </Grid>
-        <MovieList movies={displayedMovies}></MovieList>
+        <MovieList movies={displayedMovies} selectFavorite={addToFavorites}></MovieList>
       </Grid>
     </Grid>
   );
