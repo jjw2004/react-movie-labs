@@ -14,23 +14,29 @@ const MovieHeader = (props) => {
         component="div" 
         sx={{
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
+            alignItems: "center",
             flexWrap: "wrap",
-            padding: 1.5,
-            margin: 0,
+            padding: 2,
+            margin: "0 0 1rem 0",
+            width: "100%",
         }}
       >
       <IconButton aria-label="go back">
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
 
-      <Typography variant="h4" component="h3">
+      <Typography variant="h4" component="h3" sx={{ flexGrow: 1, textAlign: "center" }}>
         {movie.title}
-        <a href={movie.homepage}>
-          <HomeIcon color="primary" />
-        </a>
+        {movie.homepage && (
+          <a href={movie.homepage} style={{ marginLeft: "10px" }}>
+            <HomeIcon color="primary" />
+          </a>
+        )}
         <br />
-        <span sx={{ fontSize: "1.5rem" }}>{`   "${movie.tagline}"`} </span>
+        <Typography variant="h6" component="span" sx={{ fontStyle: "italic" }}>
+          {movie.tagline && `"${movie.tagline}"`}
+        </Typography>
       </Typography>
       <IconButton aria-label="go forward">
         <ArrowForwardIcon color="primary" fontSize="large" />
