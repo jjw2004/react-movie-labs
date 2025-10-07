@@ -5,40 +5,37 @@ import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import HomeIcon from "@mui/icons-material/Home";
+import { useNavigate } from "react-router-dom";
 
 const MovieHeader = (props) => {
   const movie = props.movie;
+  const navigate = useNavigate();
 
   return (
     <Paper 
         component="div" 
         sx={{
             display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            justifyContent: "space-around",
             flexWrap: "wrap",
-            padding: 2,
-            margin: "0 0 1rem 0",
-            width: "100%",
+            padding: 1.5,
+            margin: 0,
         }}
       >
-      <IconButton aria-label="go back">
+      <IconButton aria-label="go back" onClick={() => navigate(-1)} >
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
 
-      <Typography variant="h4" component="h3" sx={{ flexGrow: 1, textAlign: "center" }}>
+      <Typography variant="h4" component="h3">
         {movie.title}
-        {movie.homepage && (
-          <a href={movie.homepage} style={{ marginLeft: "10px" }}>
-            <HomeIcon color="primary" />
-          </a>
-        )}
+        <a href={movie.homepage}>
+          <HomeIcon color="primary" />
+        </a>
         <br />
-        <Typography variant="h6" component="span" sx={{ fontStyle: "italic" }}>
-          {movie.tagline && `"${movie.tagline}"`}
-        </Typography>
+        <span sx={{ fontSize: "1.5rem" }}>{`   "${movie.tagline}"`} </span>
       </Typography>
-      <IconButton aria-label="go forward">
+
+      <IconButton aria-label="go forward" onClick={() => navigate(+1) } >
         <ArrowForwardIcon color="primary" fontSize="large" />
       </IconButton>
     </Paper>
