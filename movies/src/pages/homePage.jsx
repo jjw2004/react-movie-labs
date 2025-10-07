@@ -25,16 +25,35 @@ const HomePage = (props) => {
   };
 
   useEffect(() => {
+    console.log("TMDB API Key:", import.meta.env.VITE_TMDB_KEY);
     fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US&include_adult=false&page=1`
     )
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
       .then((json) => {
-        console.log(json);
+        console.log("API Response:", json);
         return json.results;
       })
       .then((movies) => {
         setMovies(movies);
+      })
+      .catch((error) => {
+        console.error("Error fetching movies:", error);
+        // Fallback sample data
+        const sampleMovies = [{
+          id: 1,
+          title: "Sample Movie",
+          poster_path: "/sample.jpg",
+          release_date: "2023-01-01",
+          vote_average: 7.5,
+          genre_ids: [28, 12]
+        }];
+        setMovies(sampleMovies);
       });
   }, []);
 
