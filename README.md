@@ -17,3 +17,10 @@ Assignment for Web app devolpment 2
 - Add popular movies to favorites
 - Cached data for improved performance using React Query
 - Accessible via header navigation or `/movies/popular` route
+
+### Now Playing Page
+- Shows movies currently in theaters
+- Same layout and interactions as other list pages
+- Add now-playing movies to favorites
+- Uses React Query for caching
+- Accessible via header navigation or `/movies/now-playing` route
