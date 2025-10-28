@@ -11,3 +11,9 @@ Assignment for Web app devolpment 2
 - Cached data for improved performance using React Query
 - Accessible via header navigation or `/movies/top-rated` route
 
+### Popular Movies Page
+- Displays currently trending/popular movies from TMDB
+- Browse movies with the most user activity and attention
+- Add popular movies to favorites
+- Cached data for improved performance using React Query
+- Accessible via header navigation or `/movies/popular` route
