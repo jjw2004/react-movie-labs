@@ -24,3 +24,9 @@ Assignment for Web app devolpment 2
 - Add now-playing movies to favorites
 - Uses React Query for caching
 - Accessible via header navigation or `/movies/now-playing` route
+
+### Movie Cast Display
+- Shows top 6 cast members on movie details page
+- Displays actor photos, names, and character roles
+- Uses parameterized `/movie/{id}/credits` endpoint
+- Grid layout with responsive design
