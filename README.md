@@ -33,10 +33,17 @@ Assignment for Web app devolpment 2
 - Cast members are clickable, linking to actor details page
 
 ### Actor Details Page
-- Parameterized page displaying actor biography and filmography
-- Shows actor photo, name, birthday, and place of birth
-- Displays up to 12 movies the actor has appeared in
-- Each movie in filmography is clickable, linking back to movie details
-- Creates extensive linking between movies and actors
-- Uses `/person/{id}` and `/person/{id}/movie_credits` endpoints
-- Accessible by clicking any cast member on movie details page
+Parameterized page displaying actor biography and filmography
+Shows actor photo, name, birthday, and place of birth
+Displays up to 12 movies the actor has appeared in
+Each movie in filmography is clickable, linking back to movie details
+Creates extensive linking between movies and actors
+Uses `/person/{id}` and `/person/{id}/movie_credits` endpoints
+Accessible by clicking any cast member on movie details page
+
+### Recommended Movies
+- Shows up to 6 recommended movies on each movie details page
+- Uses `/movie/{id}/recommendations` parameterized endpoint
+- Each recommended movie is clickable and links to its details page
+- Grid layout with posters and release dates
+- Cached with React Query for performance
