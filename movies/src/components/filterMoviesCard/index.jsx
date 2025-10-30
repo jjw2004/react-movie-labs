@@ -11,7 +11,7 @@ import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
+import img from '../../images/transparent-cartoon-popcorn-cute-cartoon-face-white-and-red-st-cartoon-cup-of-popcorn-with-friendly-1711040636770.webp'
 
 const formControl = 
   {
@@ -55,7 +55,7 @@ export default function FilterMoviesCard(props) {
   return (
     <Card 
       sx={{
-        backgroundColor: "rgb(204, 204, 0)"
+        backgroundColor: "#d32f2f"
       }} 
       variant="outlined">
       <CardContent>

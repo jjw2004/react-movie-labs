@@ -33,8 +33,9 @@ const SearchBar = () => {
               </IconButton>
             </InputAdornment>
           ),
+          style: { color: 'black' },
         }}
-        sx={{ background: "white", borderRadius: 1, minWidth: 180 }}
+        sx={{ background: "white", borderRadius: 1, minWidth: 180, input: { color: 'black' } }}
       />
     </form>
   );
