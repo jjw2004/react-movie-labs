@@ -10,6 +10,7 @@ This project implements a full-featured React movie app using the TMDB API, with
 - Sorting dropdown for search results (popularity, release date, rating, title)
 - All major TMDB endpoints: Popular, Top Rated, Now Playing, Upcoming, Movie Details, Actor Details, Recommendations, Reviews
 - Context for favorites, must-watch, and reviews
+- Dedicated Must Watch page: add movies to your must-watch list from any main movie list page and view them at /movies/must-watch or via the "Must Watch" link in the header
 - Cast and actor linking between movies and people
 - Recommended movies on each movie details page
 - Custom popcorn image for the filter card (replacing the default landscape)
@@ -36,12 +37,19 @@ Assignment for Web app devolpment 2
 - Cached data for improved performance using React Query
 - Accessible via header navigation or `/movies/popular` route
 
+
 ### Now Playing Page
 - Shows movies currently in theaters
 - Same layout and interactions as other list pages
 - Add now-playing movies to favorites
 - Uses React Query for caching
 - Accessible via header navigation or `/movies/now-playing` route
+
+### Must Watch Movies Page
+- Add any movie to your must-watch list from the Home, Popular, Top Rated, Now Playing, or Upcoming pages using the "Add to Must Watch" button on each movie card
+- View all your must-watch movies on a dedicated page at `/movies/must-watch`
+- Access the Must Watch page directly from the site header navigation
+- Must Watch list is managed globally using React context
 
 ### Movie Cast Display
 - Shows top 6 cast members on movie details page
