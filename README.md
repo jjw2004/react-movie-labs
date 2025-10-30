@@ -47,3 +47,11 @@ Accessible by clicking any cast member on movie details page
 - Each recommended movie is clickable and links to its details page
 - Grid layout with posters and release dates
 - Cached with React Query for performance
+
+### Search Functionality
+- Search bar in the site header (desktop)
+- Search for movies by title using TMDB `/search/movie` endpoint
+- Results displayed in a responsive grid with posters and release dates
+- Each result is clickable and links to the movie details page
+- Dedicated `/search` route for results page
+- Fully integrated with React Query for caching and performance
