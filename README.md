@@ -1,3 +1,21 @@
+# Features and Customizations
+
+This project implements a full-featured React movie app using the TMDB API, with extensive enhancements for assignment requirements and modern UI/UX:
+
+- Custom Material-UI theme: red header, black background, dark grey cards, and white text for a bold, modern look
+- Responsive layout using MUI Grid and Card components
+- Interactive card hover effects for a polished user experience
+- Sticky filter card on large screens for easy access to filtering
+- Search bar in the header with real-time navigation to results
+- Sorting dropdown for search results (popularity, release date, rating, title)
+- All major TMDB endpoints: Popular, Top Rated, Now Playing, Upcoming, Movie Details, Actor Details, Recommendations, Reviews
+- Context for favorites, must-watch, and reviews
+- Cast and actor linking between movies and people
+- Recommended movies on each movie details page
+- Custom popcorn image for the filter card (replacing the default landscape)
+- Robust error handling and loading states
+- Clean navigation and linking between all entities
+
 # React Movie Labs
 
 Assignment for Web app devolpment 2
@@ -61,3 +79,9 @@ Accessible by clicking any cast member on movie details page
 - Sorting dropdown above results grid
 - Updates results in real time
 - Works on the search results page for all queries
+
+### Extra Work
+- Changed colours of the page
+- Changed the picture on the genre sorting from the landscape to a simple popcorn logo
+
+

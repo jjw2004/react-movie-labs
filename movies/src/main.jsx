@@ -3,6 +3,7 @@ import NowPlayingMoviesPage from './pages/nowPlayingMoviesPage'
 import ActorDetailsPage from './pages/actorDetailsPage'
 import SearchResultsPage from './pages/searchResultsPage'
 import FavoriteMoviesPage from './pages/favoriteMoviesPage';
+import MustWatchMoviesPage from './pages/mustWatchMoviesPage';
 import UpcomingMoviesPage from './pages/upcomingMoviesPage';
 import TopRatedMoviesPage from './pages/topRatedMoviesPage';
 import AddMovieReviewPage from './pages/addMovieReviewPage';
@@ -80,6 +81,7 @@ const App = () => {
             <Routes>
               <Route path="/search" element={<SearchResultsPage />} />
               <Route path="/movies/favorites" element={<FavoriteMoviesPage />} />
+              <Route path="/movies/must-watch" element={<MustWatchMoviesPage />} />
               <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
               <Route path="/movies/popular" element={<PopularMoviesPage />} />
               <Route path="/movies/now-playing" element={<NowPlayingMoviesPage />} />
