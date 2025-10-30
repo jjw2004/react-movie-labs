@@ -55,3 +55,9 @@ Accessible by clicking any cast member on movie details page
 - Each result is clickable and links to the movie details page
 - Dedicated `/search` route for results page
 - Fully integrated with React Query for caching and performance
+
+### Sorting
+- Sort search results by popularity, release date, rating, or title (A-Z)
+- Sorting dropdown above results grid
+- Updates results in real time
+- Works on the search results page for all queries
